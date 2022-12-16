@@ -1,0 +1,18 @@
+{% extends 'temp/adminhome.html' %}
+{% block base %}
+    <div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">RATING</h1>
+
+    <tr>
+	<td>username</td>
+    <td>rating</td></tr>
+    {%for i in details%}<tr>
+    <td>{{ i.u.name}}</td>
+    <td>{{ i.rating }}</td>
+    </tr>
+{% endfor %}
+</table>
+    </div>
+
+{% endblock %}

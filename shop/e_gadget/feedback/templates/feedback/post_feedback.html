@@ -1,0 +1,13 @@
+{% extends 'temp/custemer_home.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+    <table align="center">
+
+		<h1 align="center">FEEDBACK</h1>
+		<tr><td>FEEDBACK</td>
+			<td><textarea type="text" name="feedback" required=""></textarea><td></tr>
+			<tr><td><input type="submit" name="post" value="POST"></td></tr>
+		</table>
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'temp/shop_home.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">PRODUCT</h1>
+	<tr>
+	<td>product</td>
+	<td>image</td>
+	<td>price</td>
+        <td>specification</td>
+        <td>status</td>
+        <td></td>
+        <td></td>
+    </tr>
+    {%for i in details%}
+        <tr><td>{{ i.product }}</td>
+       <td> <img src="/static/{{ i.image }}"></td>
+		<td>{{ i.price }}</td>
+            <td>{{ i.specifications }}</td>
+            <td>{{ i.status }}</td>
+        <td><a href="{% url 'edit' idd=i.p_id%}"style="color: #003eff">edit</a></td>
+            <td><a href="{% url 'delete' idd=i.p_id %}" style="color: #003eff">delete</a></td>
+        </tr>
+    {%endfor  %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'temp/custemer_home.html' %}
+{% block base %}
+<form method="POST">
+    <table align="center">
+	<h1 align="center">PAYMENT_DETAILS</h1>
+	<tr><td>quantity</td>
+		<td><input type="text" name="qty" required=""></td></tr>
+    <tr><td><input type="submit" name="payment" value="submit"></td></tr>
+		<tr><td>amount</td>
+		<td><input type="text" name="amount" required=""></td></tr>
+    <tr><td><input type="submit" name="pay" value="pay"></td></tr>
+</table>
+</form>
+{% endblock %}

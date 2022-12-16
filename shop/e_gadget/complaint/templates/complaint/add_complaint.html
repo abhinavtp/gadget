@@ -1,0 +1,12 @@
+{% extends 'temp/custemer_home.html' %}
+{% block base %}
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+		<h1 align="center">COMPLAINT</h1>
+		<tr><td>COMPLAINT</td>
+			<td><textarea type="text" name="complaint" required=""></textarea><td></tr>
+            <tr><td><input type="submit" name="post" value="POST"></td></tr>
+		</table>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'temp/adminhome.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+
+	<h1 align="center">PAYMENT</h1>
+	<tr>
+	<td>username</td>
+	<td>amount</td>
+	<td>product</td>
+	<td>payment_status</td>
+	<td>date</td></tr>
+    {%for i in objval%}
+	<tr><td>{{ i.u_id}}</td>
+		<td>{{ i.amount }}</td>
+		<td>{{ i.p_id }}</td>
+		<td>{{ i.status }}</td>
+		<td>{{ i.date }}</td></tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

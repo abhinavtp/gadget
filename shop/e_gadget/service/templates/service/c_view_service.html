@@ -1,0 +1,19 @@
+{% extends 'temp/custemer_home.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">SERVICES</h1>
+	<tr>
+	<td>Services</td>
+	<td>Details</td>
+        <td>status</td>
+    </tr>
+{%for i in objval%}
+    <tr><td>{{ i.service }}</td>
+        <td>{{ i.details }}</td>
+         <td>{{ i.status }}</td>
+</tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

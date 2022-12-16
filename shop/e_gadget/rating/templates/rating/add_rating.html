@@ -1,0 +1,14 @@
+{% extends 'temp/custemer_home.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+<div class="container">
+    <table class="table table-bordered">
+		<h1 align="center">RATING</h1>
+		<tr><td>RATING</td>
+			<td><textarea type="text" name="rating" required=""></textarea><td></tr>
+			<tr><td><input type="submit" name="add" value="ADD"></td></tr>
+		</table>
+</div>
+</form>
+{% endblock %}

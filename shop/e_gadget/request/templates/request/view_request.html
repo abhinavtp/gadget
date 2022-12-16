@@ -1,0 +1,19 @@
+{% extends 'temp/service_eng_home.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">REQUEST</h1>
+	<tr>
+	<td>username</td>
+	<td>service</td>
+<td>details<td>
+	<tr>
+        {%for i in msg%}
+        <td>{{ i.u.name }}</td>
+		<td>{{ i.service.service}}</td>
+            <td>{{ i.service.details }}</td>
+            <td><a href="{% url 'update' abc=i.service_id %}"style="color: #003eff">Update_status</a></td>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

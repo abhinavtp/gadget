@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/log.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+   
+    
+</head>
+
+<!-- <body style="background-color:rgb(0, 147, 252)">
+
+  <form action="">
+
+<div style="width: 500px; height: 400px; padding-top: 40px; margin-left: 450px; margin-top: 200px; background-color: white; font-size:20px; " >
+<button type="button" style="margin-left: 80px; width: 150px;"  class="btn btn-outline-primary" >SIGN IN </button> 
+<button type="button"  style="margin-left: 40px; width: 150px;"  class="btn btn-outline-primary"> SIGN UP</button><br><br>
+
+<div class="input-group flex-nowrap"  style="width:430px; padding-left: 80px;" >
+  
+  <input type="text"    class="form-control border-primary" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" required>
+</div>
+<br>
+<div class="input-group flex-nowrap"  style="width:430px; padding-left: 80px;" >
+ 
+  <input type="email" class="form-control  border-primary" placeholder="email" aria-label="email" aria-describedby="addon-wrapping" required>
+</div>
+<br>
+
+<div class="input-group flex-nowrap" style="width:430px; padding-left: 80px;" >
+  
+  <input type="password" id="password" class="form-control  border-primary "  placeholder="password" aria-label="password" aria-describedby="addon-wrapping" required>
+</div>
+<br>
+<div style="margin-left: 180px;"  >
+<input type="checkbox" name="" id="showPassword">
+<label for="Password">showPassword</label>
+</div>
+
+
+<button type="submit" id="sub" style="width:350px; margin-left: 80px;"  class="btn btn-outline-primary" >SIGN UP</button>
+</div> 
+
+</form> -->
+
+
+
+
+
+
+
+  <div class="log1">
+    <div class="logpage">
+      
+     <form onsubmit ="return verifyPassword()">
+        <div class="mb-3">
+            <div class="login"><h1>LOGIN <img src="{% static 'images/applelog.PNG' %}" alt="" class="imgapple"> ..!</h1></div>
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  >
+          <span id = "emails" style="color:red"></span>
+          
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password"  >
+          <span id = "message" style="color:red"></span>
+          <span id="lo1"></span>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="showPassword">
+          <label class="form-check-label" for="showPassword">show password</label>
+        </div>
+        <button type="submit"    class="btn btn-outline-success"> Submit</button>
+        <button type = "reset"  class="btn btn-outline-success" value = "Reset" >Reset</button>
+      </form>
+      </div>
+      </div> 
+    
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/log.js' %}"></script>
+
+</body>
+</html>

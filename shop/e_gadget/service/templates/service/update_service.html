@@ -1,0 +1,12 @@
+{% extends 'temp/service_eng_home.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+    <table align="center">
+	<h1 align="center">UPDATE_STATUS</h1>
+<tr><td>status</td>
+	    <td><input type="text" name="staus" required=""></td></tr>
+    <tr><td><input type="submit" name="add" value="ADD"></td></tr>
+</table>
+</form>
+{% endblock %}

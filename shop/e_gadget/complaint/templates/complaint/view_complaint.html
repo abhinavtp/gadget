@@ -1,0 +1,28 @@
+{% extends 'temp/adminhome.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">COMPLAINT</h1>
+	<tr>
+{#	<td>username</td>#}
+	<td>complaint</td>
+	<td>date</td>
+	<td>time</td>
+        <td>u_id</td>
+        <td></td>
+        <td></td>
+    </tr>
+    {%for i in objval%}
+	<tr>
+{#        <td>{{ i.ui }}</td>#}
+		<td>{{ i.complaint }}</td>
+		<td>{{ i.date }}</td>
+		<td>{{ i.time }}</td>
+        <td>{{ i.u.name }}</td>
+	    <td><a href="{% url 'post_reply' abc=i.comp_id %}" class="btn btn-primary">reply</a></td>
+{#        <td><a href="{% url 'approv' abc=i.comp_id%}"style="color: #003eff">approve</a></td>#}
+{#        <td><a href="{% url 'rejct' abc=i.comp_id%}"style="color: #003eff">reject</a></td></tr>#}
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

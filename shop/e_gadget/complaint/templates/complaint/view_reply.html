@@ -1,0 +1,22 @@
+{% extends 'temp/shop_home.html' %}
+{% block base %}
+
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">REPLY</h1>
+	<tr>
+
+	<td>COMPLAINT</td>
+	<td>DATE</td>
+	<td>TIME</td>
+        <td>REPLY</td>
+    </tr>
+        {%for i in rplyy%}
+	<tr><td>{{ i.complaint}}</td>
+	<td>{{ i.date }}</td>
+     <td>{{ i.time }}</td>
+     <td>{{ i.reply }}</td></tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

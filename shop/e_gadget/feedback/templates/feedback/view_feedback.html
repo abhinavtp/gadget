@@ -1,0 +1,18 @@
+{% extends 'temp/adminhome.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">FEEDBACK</h1>
+	<tr>
+	<td>u_id</td>
+	<td>feedback</td>
+	<td>date</td></tr>
+	<tr>
+        {%for i in msg%}
+        <td>{{ i.u_id }}</td>
+		<td>{{ i.feedback }}</td>
+		<td>{{ i.date }}</td></tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

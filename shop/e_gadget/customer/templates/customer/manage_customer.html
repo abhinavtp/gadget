@@ -1,0 +1,26 @@
+{% extends 'temp/shop_home.html' %}
+{% block base %}
+<div class="container">
+    <table class="table table-bordered">
+	<h1 align="center">CUSTOMER</h1>
+	<tr>
+	<td>name</td>
+	<td>address</td>
+	<td>email</td>
+        <td>phone</td>
+        <td>status</td>
+    </tr>
+    {%for i in details%}
+	<tr>
+        <td>{{ i.name }}</td>
+		<td>{{ i.address }}</td>
+		<td>{{ i.email }}</td>
+		<td>{{ i.phone }}</td>
+        <td>{{ i.status }}</td>
+
+		<td><a href="{% url 'apprv' idd=i.c_id%}"style="color: #003eff">approve</a></td>
+	<td><a href="{% url 'rejct' idd=i.c_id %}"style="color: #003eff">reject</a></td></tr>
+    {%endfor %}
+	</table>
+</div>
+{% endblock %}
